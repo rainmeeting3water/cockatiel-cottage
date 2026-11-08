@@ -1,0 +1,226 @@
+{
+  "version": "0.3.1",
+  "saveSchema": 2,
+  "decorSchema": 1,
+  "albumSchema": 1,
+  "date": "2026-11-09",
+  "publication": "local-only; not deployed",
+  "files": [
+    {
+      "file": ".gitignore",
+      "sha256": "31e59f683c88d90584a7dd5fd716273f69c679f60e95321b104f4b086ccf2770"
+    },
+    {
+      "file": "ASSETS.md",
+      "sha256": "0a0dd7e5e8cf6e665764966a06872f5b45136a44ae77a84cd9bca9d166638c5d"
+    },
+    {
+      "file": "CONTRIBUTING.md",
+      "sha256": "2ccadb8de618069e149de6cc9de3208b3cd80ca5ba22ea5b611310d4f57d329c"
+    },
+    {
+      "file": "LICENSE",
+      "sha256": "ae8757c25ed2c09d673dae3e119fb8090e0b677cd7e5f3eac9e91b06d434ab0e"
+    },
+    {
+      "file": "MUSIC-SOURCES.md",
+      "sha256": "f477c2250fd8b09a62ef124e2b94da9db63960f78a9403c1e950093b468af045"
+    },
+    {
+      "file": "README.md",
+      "sha256": "733916d8ad966532520c4c9e9aafd9a69c1efc57f8d981a4728591d5aab38319"
+    },
+    {
+      "file": "TESTING.md",
+      "sha256": "4e45bd80c80d0a685cb506d28d5a7993fca47f82da76dcea8a596cca2291a302"
+    },
+    {
+      "file": "THIRD-PARTY-NOTICES.md",
+      "sha256": "48cb3270033abd638a26f9e074498c880ca1cc7168ec9cbfcd884711bd8b8b34"
+    },
+    {
+      "file": "VETERINARY-REVIEW.md",
+      "sha256": "f4adc1e36c8aefa356a5121f6754b13e8c46b015e8ff9bcd64123485d5bedca8"
+    },
+    {
+      "file": "app.js",
+      "sha256": "d71772ee9d20ebbbe600bdf1f7c9183f3f121283f906983d33649f50f551a7ea"
+    },
+    {
+      "file": "art.js",
+      "sha256": "ba5ce58f8e19c54e3e5783b4490555e81d2f0cc46ae4507f8e4e79c4a0071362"
+    },
+    {
+      "file": "assets\\bird-gray.webp",
+      "sha256": "3cd3a30c32bb9b754e526b2cc709a3075804c36bbc58b2b00ad19532b19c6dbf"
+    },
+    {
+      "file": "assets\\bird-lutino.webp",
+      "sha256": "a3b97628c1a186347c400252d7c5e4d06f067a8c88990e6104e934670262bf5a"
+    },
+    {
+      "file": "assets\\bird-pearl.webp",
+      "sha256": "fcb56a975d250bb87c57700575b1bb79570eeaa10e4073df48ccdf045ae3833e"
+    },
+    {
+      "file": "assets\\lutino-care.gif",
+      "sha256": "7ef534d2dc6915a7819ae3a3140be427987b89c5761ff2227e7ac74d99e85273"
+    },
+    {
+      "file": "assets\\lutino-flight.gif",
+      "sha256": "cc9ee1489b64f07b5fed71037a7a2ecbbc9d6ad4d9c6a572071763fb76a7acd6"
+    },
+    {
+      "file": "assets\\lutino-walk.gif",
+      "sha256": "89004fc81ebb9ac63ee4865f48a69f2d6bf958444941b5bb638e2793378868f6"
+    },
+    {
+      "file": "assets\\sprites.json",
+      "sha256": "59875fb5adbb7f98a6c29fe483e279657cbdb6b8828bbd92c7c8610e5677b2e6"
+    },
+    {
+      "file": "backup.js",
+      "sha256": "019c2cb6c3fea668e463016a695b3ea7aef38007b2e130f33b5b27552b0853be"
+    },
+    {
+      "file": "content.js",
+      "sha256": "d26ec0fa163be413e25d5ceb8e065f3bee94a4587521c4dd51f5ded0dc433d5d"
+    },
+    {
+      "file": "core.js",
+      "sha256": "7484f615439b08b4909d79c518c0afc9c6a3663419abef702ede51858fd2a7b8"
+    },
+    {
+      "file": "creator.css",
+      "sha256": "eaae0cb0e0006798f4a98b80aeee0238244e437d1e430b1f1c5a62093b4245d4"
+    },
+    {
+      "file": "creator.js",
+      "sha256": "233cdde2097b47cc32102c1b9223beb922d7e4cbc1f465c982bd414369e1eb12"
+    },
+    {
+      "file": "decor.css",
+      "sha256": "98bcf5ac59fc6f0416d7ded3c52bd116404351a14855de81ffc183610f6ba305"
+    },
+    {
+      "file": "decor.js",
+      "sha256": "d3334cbdad49111245af7e2838c234544246518e3d4da9ceb9af8e1b07d883b2"
+    },
+    {
+      "file": "favicon.svg",
+      "sha256": "22dd48abe7fa8f5606930ef9b9a7369cce1d8c29e0f820af3a634fc5fbb33b5b"
+    },
+    {
+      "file": "gallery.css",
+      "sha256": "4cce20ac2154586418922a90c90f21e7e5c679568d00f404dca39c022e3cbdff"
+    },
+    {
+      "file": "gallery.js",
+      "sha256": "f6d01609acd49632261b6def1ed00b4c105544b153388dc642259730f3966312"
+    },
+    {
+      "file": "guides.css",
+      "sha256": "7187c624b52356aa13784dc6d21a73d85864f8c167520a751e605aa87c7e5d05"
+    },
+    {
+      "file": "guides.js",
+      "sha256": "bea9431abfd5bf641a31660ccdb2199ae843ce9c2f72e2999e00bfba77872b35"
+    },
+    {
+      "file": "handbook\\01-建立專屬鸚鵡網站.txt",
+      "sha256": "f543272c22f40a3c73e6660f504496733a15060d2cdae39f8e53f81e6c0e7961"
+    },
+    {
+      "file": "handbook\\02-換成自家鳥寶.txt",
+      "sha256": "5a89c90829cf72679501ca19700b24c5882be3e6a9c642ec2a8911e266bffc14"
+    },
+    {
+      "file": "handbook\\CREATOR-PROMPTS.md",
+      "sha256": "21410dad580e0e58f412d9b1ddcfd00e01f9a8bc7787872d5a689a7085ee4544"
+    },
+    {
+      "file": "handbook\\PUBLISH-PLAN.md",
+      "sha256": "3efc9e591ec65b6da980764e7e377d765c17391fa8272253d50a8695ddd96b74"
+    },
+    {
+      "file": "handbook\\SHARE-PROMPTS.md",
+      "sha256": "b675229b6ebf3a389daa8b5a769c23f7b7a001449bf5323c4502e5298f9b42f0"
+    },
+    {
+      "file": "handbook\\START-HERE.md",
+      "sha256": "53f89ccf34ea47b867ef0d16b04676c283aa0945d9abbafb76da534ba81600ac"
+    },
+    {
+      "file": "index.html",
+      "sha256": "cb9028d39e7744380bbadc3e4f7a1571738c329214562ad723e09b8cfed0c7b3"
+    },
+    {
+      "file": "motion.css",
+      "sha256": "2e36ca54ef304ae1bdaa58b54d9de4a2f645c0ac3afd112d677051d2b89ee066"
+    },
+    {
+      "file": "motion.js",
+      "sha256": "4bedf2a0fcd839367cf16dbc7e89e4b112689bacd4124400638b4f934c1b1c64"
+    },
+    {
+      "file": "music.js",
+      "sha256": "79f4aad143437266d988e39d4d0edff9812c0bb8403509ab4b27f929fadf7698"
+    },
+    {
+      "file": "preview.cjs",
+      "sha256": "e949663f916901ce8eba762f2417a2b4fd1bf0366b034e142b1807abd1c4c7f7"
+    },
+    {
+      "file": "standalone.html",
+      "sha256": "be619b56e3b7156260a6575600f2feda355fe9bb91c028b0e43cd506e0eeaf5f"
+    },
+    {
+      "file": "style.css",
+      "sha256": "58c37c0da05e6c6bbc856d14540e8ab0f5bdaa2e26e79dd476699d2e8349c357"
+    },
+    {
+      "file": "tests\\backup.test.cjs",
+      "sha256": "31c81b64d40d199f83a7c1192a12b94bcf493adbb17318739170a3d4914cb3a7"
+    },
+    {
+      "file": "tests\\core.test.cjs",
+      "sha256": "0abef63c1f7f402fa3ec8506cb1fd2e63c334a8777955f1358f387460e58d4c0"
+    },
+    {
+      "file": "tests\\creator.test.cjs",
+      "sha256": "666f35ec601281a18d30ee860cb4ed508851953009e8cb9ca6d9f71e5fd57d6a"
+    },
+    {
+      "file": "tests\\decor.test.cjs",
+      "sha256": "0e31230afe07f4e4f51a570326867306ff731b5e75c33c2b53b78fc1154782a4"
+    },
+    {
+      "file": "tests\\gallery.test.cjs",
+      "sha256": "1bff4fbeade9c111211f079055b3b90917b70a4804cb8ee03f60f1f094a64ded"
+    },
+    {
+      "file": "tests\\guides.test.cjs",
+      "sha256": "58a3f6279cfb0df30018ffa5ae9205368e374175b0234025af43d0c0165b18b6"
+    },
+    {
+      "file": "tests\\motion.test.cjs",
+      "sha256": "3c37bc25967f668051c8db718c3949309ff7ad1cdb955fe02c07d34a98e4d348"
+    },
+    {
+      "file": "tests\\music.test.cjs",
+      "sha256": "cc7112c6ee5d59f6733b851b6a10a95c428a9872efec0b39e8c4b1dbc3d523cc"
+    },
+    {
+      "file": "tests\\public.test.cjs",
+      "sha256": "e85593b15bdfceb6870b120fad391bb17091c9d9f6bcf1fd5df19dd287dff312"
+    },
+    {
+      "file": "tools\\build-public.cjs",
+      "sha256": "5817bb710f2e690fee261b5c9a3843b968b06f2e203a412e8083b6c2ceaeef72"
+    },
+    {
+      "file": "tools\\package.cjs",
+      "sha256": "bc57951e7c6092db377ce85ab31fbdbe43aa2f06827018c72930d5bdcbf5eb34"
+    }
+  ]
+}

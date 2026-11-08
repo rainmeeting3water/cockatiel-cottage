@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-Hant-TW" data-youtube-mode="external">
+<head>
+<!--
+Original project code, documentation, and game artwork are licensed under MIT.
+Third-party linked media and user photographs are excluded; see THIRD-PARTY-NOTICES.md in the source.
+
+MIT License
+
+Copyright (c) 2026 rainmeeting3water
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#faf7f0">
+  <meta name="description" content="陪一隻玄鳳慢慢長大。認識玄鳳、查詢食物，在溫暖的小屋練習負責任的照顧。">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; frame-src https://www.youtube-nocookie.com; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>玄鳳小日子｜一起練習，好好陪伴</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="motion.css">
+  <link rel="stylesheet" href="gallery.css">
+  <link rel="stylesheet" href="decor.css">
+  <script src="core.js" defer></script>
+  <script src="content.js" defer></script>
+  <script src="art.js" defer></script>
+  <script src="motion.js" defer></script>
+  <script src="music.js" defer></script>
+  <script src="gallery.js" defer></script>
+  <script src="decor.js" defer></script>
+  <script src="backup.js" defer></script>
+  <link rel="stylesheet" href="guides.css">
+  <link rel="stylesheet" href="creator.css">
+  <script src="guides.js" defer></script>
+  <script src="creator.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip">跳到主要內容</a>
+  <aside class="sidebar" aria-label="主選單">
+    <a class="brand" href="#home" aria-label="玄鳳小日子首頁"><span class="brand-bird" aria-hidden="true">ˎ₍• ʚ •₎ˏ</span><strong>玄鳳小日子</strong><span class="brand-en">LITTLE COCKATIEL DAYS</span></a>
+    <p class="nav-caption">和鳥寶一起的每一天</p>
+    <nav id="nav"></nav>
+    <div class="sidebar-note"><span data-icon="feather"></span><p>一起玩，<br>也一起休息。</p><span>慢慢來，我們一起學。</span></div>
+    <button class="nav-item settings-trigger" data-action="settings"><span data-icon="settings"></span><span>設定與紀錄備份</span></button>
+    <span class="local-label"><i></i> 體驗版 v0.3.1</span>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar"><span id="breadcrumb">我的玄鳳小屋</span><div class="top-tools"><span class="save-status" id="save-status" role="status">紀錄留在這台裝置</span><button class="icon-button" id="sound-toggle" data-action="sound" aria-label="開啟互動音效" aria-pressed="false"></button><button class="icon-button mobile-settings" data-action="settings" aria-label="設定與紀錄備份"><span data-icon="settings"></span></button></div></header>
+    <main id="main" tabindex="-1"></main>
+    <footer class="footer"><span>每天一點點，好好照顧鳥寶。</span><a href="#sources">資料來源與使用說明 <span aria-hidden="true">↗</span></a></footer>
+  </div>
+  <dialog id="dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <input id="import-file" type="file" accept="application/json,.json" hidden>
+  <noscript><p class="noscript">請啟用 JavaScript，才能使用互動小屋與本機存檔。</p></noscript>
+</body>
+</html>

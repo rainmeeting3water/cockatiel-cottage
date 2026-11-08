@@ -1,0 +1,150 @@
+{
+  "version": "0.3.1",
+  "publication": "prepared locally; NOT published",
+  "publishDirectory": "docs/",
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 4716,
+      "sha256": "949ce24430e9a9f5f167d99fbf8a9d93c7a42aba960e794513ce40a7cb9ec75f"
+    },
+    {
+      "file": "favicon.svg",
+      "bytes": 366,
+      "sha256": "22dd48abe7fa8f5606930ef9b9a7369cce1d8c29e0f820af3a634fc5fbb33b5b"
+    },
+    {
+      "file": "style.css",
+      "bytes": 26693,
+      "sha256": "58c37c0da05e6c6bbc856d14540e8ab0f5bdaa2e26e79dd476699d2e8349c357"
+    },
+    {
+      "file": "motion.css",
+      "bytes": 4406,
+      "sha256": "2e36ca54ef304ae1bdaa58b54d9de4a2f645c0ac3afd112d677051d2b89ee066"
+    },
+    {
+      "file": "gallery.css",
+      "bytes": 8120,
+      "sha256": "4cce20ac2154586418922a90c90f21e7e5c679568d00f404dca39c022e3cbdff"
+    },
+    {
+      "file": "decor.css",
+      "bytes": 5346,
+      "sha256": "98bcf5ac59fc6f0416d7ded3c52bd116404351a14855de81ffc183610f6ba305"
+    },
+    {
+      "file": "guides.css",
+      "bytes": 5784,
+      "sha256": "7187c624b52356aa13784dc6d21a73d85864f8c167520a751e605aa87c7e5d05"
+    },
+    {
+      "file": "creator.css",
+      "bytes": 8087,
+      "sha256": "eaae0cb0e0006798f4a98b80aeee0238244e437d1e430b1f1c5a62093b4245d4"
+    },
+    {
+      "file": "core.js",
+      "bytes": 12360,
+      "sha256": "7484f615439b08b4909d79c518c0afc9c6a3663419abef702ede51858fd2a7b8"
+    },
+    {
+      "file": "content.js",
+      "bytes": 18672,
+      "sha256": "d26ec0fa163be413e25d5ceb8e065f3bee94a4587521c4dd51f5ded0dc433d5d"
+    },
+    {
+      "file": "art.js",
+      "bytes": 8012,
+      "sha256": "ba5ce58f8e19c54e3e5783b4490555e81d2f0cc46ae4507f8e4e79c4a0071362"
+    },
+    {
+      "file": "motion.js",
+      "bytes": 5137,
+      "sha256": "4bedf2a0fcd839367cf16dbc7e89e4b112689bacd4124400638b4f934c1b1c64"
+    },
+    {
+      "file": "music.js",
+      "bytes": 7770,
+      "sha256": "79f4aad143437266d988e39d4d0edff9812c0bb8403509ab4b27f929fadf7698"
+    },
+    {
+      "file": "gallery.js",
+      "bytes": 26307,
+      "sha256": "f6d01609acd49632261b6def1ed00b4c105544b153388dc642259730f3966312"
+    },
+    {
+      "file": "decor.js",
+      "bytes": 21260,
+      "sha256": "d3334cbdad49111245af7e2838c234544246518e3d4da9ceb9af8e1b07d883b2"
+    },
+    {
+      "file": "backup.js",
+      "bytes": 2422,
+      "sha256": "019c2cb6c3fea668e463016a695b3ea7aef38007b2e130f33b5b27552b0853be"
+    },
+    {
+      "file": "guides.js",
+      "bytes": 14008,
+      "sha256": "bea9431abfd5bf641a31660ccdb2199ae843ce9c2f72e2999e00bfba77872b35"
+    },
+    {
+      "file": "creator.js",
+      "bytes": 28171,
+      "sha256": "233cdde2097b47cc32102c1b9223beb922d7e4cbc1f465c982bd414369e1eb12"
+    },
+    {
+      "file": "app.js",
+      "bytes": 47457,
+      "sha256": "d71772ee9d20ebbbe600bdf1f7c9183f3f121283f906983d33649f50f551a7ea"
+    },
+    {
+      "file": "assets/bird-lutino.webp",
+      "bytes": 600720,
+      "sha256": "a3b97628c1a186347c400252d7c5e4d06f067a8c88990e6104e934670262bf5a"
+    },
+    {
+      "file": "assets/bird-gray.webp",
+      "bytes": 401642,
+      "sha256": "3cd3a30c32bb9b754e526b2cc709a3075804c36bbc58b2b00ad19532b19c6dbf"
+    },
+    {
+      "file": "assets/bird-pearl.webp",
+      "bytes": 712054,
+      "sha256": "fcb56a975d250bb87c57700575b1bb79570eeaa10e4073df48ccdf045ae3833e"
+    },
+    {
+      "file": "assets/lutino-walk.gif",
+      "bytes": 76067,
+      "sha256": "89004fc81ebb9ac63ee4865f48a69f2d6bf958444941b5bb638e2793378868f6"
+    },
+    {
+      "file": "assets/lutino-flight.gif",
+      "bytes": 86943,
+      "sha256": "cc9ee1489b64f07b5fed71037a7a2ecbbc9d6ad4d9c6a572071763fb76a7acd6"
+    },
+    {
+      "file": "assets/lutino-care.gif",
+      "bytes": 152909,
+      "sha256": "7ef534d2dc6915a7819ae3a3140be427987b89c5761ff2227e7ac74d99e85273"
+    },
+    {
+      "file": "cottage-generated.json",
+      "bytes": 395,
+      "sha256": "7003961c75a26f2657e1aab6159e8846b8083e7610f7859661eb6d77973c9292"
+    },
+    {
+      "file": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "notPublished": [
+    "private user photos",
+    "browser saves",
+    "handbook",
+    "tests",
+    "tools",
+    "standalone.html"
+  ]
+}

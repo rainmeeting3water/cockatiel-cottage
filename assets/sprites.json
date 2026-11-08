@@ -1,0 +1,60 @@
+{
+  "generator": "Built-in image_gen",
+  "assembly": "Equal-grid crop/resize and format encoding; source subject unchanged. GIF uses binary alpha required by GIF.",
+  "sprites": [
+    {
+      "color": "lutino",
+      "source": "exec-4ed3ebf2-8a42-4c7a-aa6f-76e4ffa94bad.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "3b87c92f8dc261bf84c8a5168117dab2b5509c4599781856e6e9d0e15bfda10a",
+      "atlas": "bird-lutino.webp",
+      "grid": [
+        4,
+        4
+      ],
+      "cell": [
+        320,
+        320
+      ]
+    },
+    {
+      "color": "gray",
+      "source": "exec-550f9fd4-006e-4755-8f59-d6a0f5619cde.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "01e7b9c48b01c515fe2df1b8de770404f68ac16a28017532cd8966cf25425f06",
+      "atlas": "bird-gray.webp",
+      "grid": [
+        4,
+        4
+      ],
+      "cell": [
+        320,
+        320
+      ]
+    },
+    {
+      "color": "pearl",
+      "source": "exec-baed99d7-8d7e-4433-8600-b08ac1e44d48.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "b3d60a9bb84bb1b141770c1d51516c9880f2177f5c603eef56fff3aa892b284b",
+      "atlas": "bird-pearl.webp",
+      "grid": [
+        4,
+        4
+      ],
+      "cell": [
+        320,
+        320
+      ]
+    }
+  ]
+}
