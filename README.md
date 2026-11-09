@@ -2,15 +2,15 @@
 
 陪鳥寶換水、吃飯、散步，也一起學會安全照顧。手機和電腦都能玩，不用登入。
 
-**[▶ 直接試玩](https://rainmeeting3water.github.io/cockatiel-cottage/)　｜　[下載完整程式 ZIP](https://github.com/rainmeeting3water/cockatiel-cottage/archive/refs/heads/main.zip)　｜　[換成自家鳥寶](#換成自家鳥寶)**
+**[▶ 直接試玩](https://cockatiel-cottage.pages.dev/)　｜　[下載完整程式 ZIP](https://github.com/rainmeeting3water/cockatiel-cottage/archive/refs/heads/main.zip)　｜　[換成自家鳥寶](#換成自家鳥寶)**
 
-**English:** [Play online](https://rainmeeting3water.github.io/cockatiel-cottage/) · [Download source ZIP](https://github.com/rainmeeting3water/cockatiel-cottage/archive/refs/heads/main.zip). Choose **English** at the top. Open **Settings → Text size** for larger text. Your saves and photos stay on your device.
+**English:** [Play online](https://cockatiel-cottage.pages.dev/) · [Download source ZIP](https://github.com/rainmeeting3water/cockatiel-cottage/archive/refs/heads/main.zip). Choose **English** at the top. Open **Settings → Text size** for larger text. Your saves and photos stay on your device.
 
 ## 先選一個入口
 
 | 你想做什麼？ | 從這裡開始 |
 | --- | --- |
-| 直接玩，不下載 | [開啟正式試玩網站](https://rainmeeting3water.github.io/cockatiel-cottage/) |
+| 直接玩，不下載 | [開啟正式試玩網站](https://cockatiel-cottage.pages.dev/) |
 | 下載程式、自己修改 | [下載 ZIP](https://github.com/rainmeeting3water/cockatiel-cottage/archive/refs/heads/main.zip)，解壓縮後開啟 `standalone.html` |
 | 從零做專屬鸚鵡網站 | 提示詞一：[繁體中文](handbook/01-建立專屬鸚鵡網站.txt) · [English](handbook/01-build-your-parrot-website-en.txt) |
 | 保留這個遊戲，只換自家鳥寶 | 提示詞二：[繁體中文](handbook/02-換成自家鳥寶.txt) · [English](handbook/02-use-your-own-bird-en.txt) |
@@ -36,13 +36,13 @@
 
 ## 換成自家鳥寶
 
-只想先試外觀，可以直接開啟 [鳥寶創作室](https://rainmeeting3water.github.io/cockatiel-cottage/#creator)：
+只想先試外觀，可以直接開啟 [鳥寶創作室](https://cockatiel-cottage.pages.dev/#creator)：
 
 **選自己的照片 → 複製提示詞 → 自己選圖片工具 → 匯入 16 格動作圖 → 試走、試飛 → 確認套用。**
 
 網站不會自動生圖或傳送照片。是否把照片另交給圖片工具，由你決定；對方可能收費。這只換掉你自己這次看到的角色，不會改掉所有網友的鳥寶；重新整理後會回到原角色，請自行保存動作圖。
 
-English: open the [Bird Creator](https://rainmeeting3water.github.io/cockatiel-cottage/#creator), prepare your prompt, choose an image tool yourself, then import and preview a 16-frame atlas. This website does not upload your photo or call an AI service. Your custom bird lasts only for this page session.
+English: open the [Bird Creator](https://cockatiel-cottage.pages.dev/#creator), prepare your prompt, choose an image tool yourself, then import and preview a 16-frame atlas. This website does not upload your photo or call an AI service. Your custom bird lasts only for this page session.
 
 ## 給程式助手的兩種提示詞
 
