@@ -1,29 +1,25 @@
 # 公開分享紀錄與後續計畫
 
-建議只用一套服務：GitHub 放原始碼；GitHub Pages 放試玩網站。暫不建立 Netlify 網站，也不新增帳號或資料權限。
+使用 GitHub 分享原始碼，GitHub Pages 提供試玩。不新增 Netlify、帳號、AI API、雲端相簿或資料權限。
 
-- 建議擁有人：已連接的 `rainmeeting3water`。
-- 已建立：[rainmeeting3water/cockatiel-cottage](https://github.com/rainmeeting3water/cockatiel-cottage)。2026-11-09（臺灣）建庫時曾確認為公開空庫；本批準備首次上傳 v0.3.1 原始碼、MIT 與提示詞，目標分支 main。Pages 保持關閉，不新增 Actions、Webhook 或其他部署設定。
-- 建議網站網址：`https://rainmeeting3water.github.io/cockatiel-cottage/`。這是預計網址，目前沒有發布。
-- Pages 來源：`main` 分支的 `/docs`。`docs/` 只放 `PUBLIC-FILES.json` 列出的靜態網站檔。
-- 原始碼公開後，任何人都能查看、複製程式、提示詞與原創遊戲素材；個人的瀏覽器照片與存檔不在其中。
-- Pages 網站公開後，任何人都能開啟。它和原始碼儲存庫是兩種公開內容；公開程式本身不會自動建立網站。
+## 已確認的線上基底
 
-## 預備完成的檔案
+- 公開儲存庫：[rainmeeting3water/cockatiel-cottage](https://github.com/rainmeeting3water/cockatiel-cottage)。任何人都能查看、下載程式與原創素材；MIT 的素材範圍見 LICENSE 與 THIRD-PARTY-NOTICES.md。
+- 正式試玩：[玄鳳小日子](https://rainmeeting3water.github.io/cockatiel-cottage/)。網站也是公開的，任何人都能開啟；個人相簿與存檔仍留在各自瀏覽器。
+- Pages 已依使用者後續授權啟用，來源是 `main` 的 `/docs`，建置類型 legacy。
+- v0.3.1 已發布基底：`8586f9700a73150549625754a74a6f1bd43b89fa`。Pages build 1352167918、deployment 7639775631，2026-11-09 02:11:10（臺灣）成功。
+- 先前「Pages 保持關閉、尚未上傳」是啟用前的歷史狀態，不代表目前狀態。
 
-執行 `node tools/package.cjs`，只更新單檔體驗版及來源版本雜湊。執行 `node tools/build-public.cjs`，只依白名單複製靜態檔到 `docs/` 並更新完整 `PUBLIC-FILES.json`。兩者皆不安裝、不連網、不執行 Git 或發布。
+## v0.4 更新方式
 
-## 正式公開前
+本候選加入中英介面、三種字級及 README 試玩／下載／兩種中英提示詞。來源身分見 VERSION.json，公開目錄完整清單見 PUBLIC-FILES.json；本機產檔狀態不是發布成功紀錄。
 
-1. 先前已取得建立公開庫與 MIT 授權同意；本次另取得將 v0.3.1 程式、MIT 和兩份提示詞上傳 GitHub 的指示。使用者明確要求 Pages 先不要開啟；上傳原始碼不包含網站發布、付費服務或照片上傳。外部影音、機構原始文章、字體原檔及使用者照片不在 MIT 範圍。
-2. 本批依個人 AGENTS.md 逐項核對 Git 暫存、commit 與首次 push 授權。採獨立本機檢出目錄與明列檔案，不使用萬用暫存、不變更 remote 或 upstream、不強制推送。推送後另讀回分支、檔案與 Pages 狀態，實際成功以驗證紀錄為準。
-3. 設定 Pages 前確認 main/docs 與公開清單。第一次推送不包含自動部署設定，避免先上線後才詢問。啟用 Pages 需獨立的公開發布同意。
-4. Pages 啟用後，未來 main/docs 的 push 會觸發更新；同一批只採這條發布路徑，不再額外部署 Netlify。
-5. 上線後實測 HTTPS、圖片、手機排版、存檔、本機照片、YouTube。記錄來源 commit、部署識別及臺灣時間；YouTube 153 是否解決，以實際播放為準。
+1. `node tools/package.cjs` 產生單檔體驗版和來源雜湊；`node tools/build-public.cjs` 依白名單更新 docs/ 與公開清單。皆不安裝、不連網、不執行 Git 或發布。
+2. 完成測試與敏感資料核對後，暫存、commit、push 各取得明確同意，只暫存清單內檔案，不強制推送，不更改 remote／upstream。
+3. **現在 push 到 main 會觸發既有 Pages 更新**。同一批只走一次這條發布路徑，不另手動建置 Pages 或部署 Netlify。
+4. 推送前重查遠端 main 與 main/docs 設定；若其他人已更新則先停下核對。發布後讀回來源 commit、build／deployment 識別及臺灣時間，再驗證 HTTPS 靜態檔、手機排版、語言字型、重載存檔與聽歌外連。失敗或不確定先查看既有部署，不重複發布。
+5. 本機 ZIP 保留前版與新候選。若需要恢復，以經同意的新提交修復，不改寫或刪除公開歷史。
 
-注意：YouTube 對兒童導向網站有額外自我指定要求，即使使用隱私加強播放器也一樣。正式網站未完成相關設定前，應使用外連收聽版本；不可宣稱 nocookie 等同不會與 YouTube 交換資料。來源見 MUSIC-SOURCES。
+## 影音與費用
 
-不使用付費建置、AI API 或雲端相簿。GitHub Pages 適用性與方案以正式發布前的官方說明為準：
-https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
-
-恢復方式：本機保留 v0.2 與 v0.3 ZIP。未來若發布出錯，先保留失敗證據，修正後經同意以新版本更新；不強制推送，不任意刪除遠端紀錄。
+公開版使用原作者 YouTube 外連，不載入 iframe，也不宣稱站內播放或錯誤 153 已修好。外部影音、機構原文、字型原檔、使用者照片不在 MIT 授權範圍。不使用付費建置、AI API 或雲端相簿。實際服務方案以官方說明為準：[GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)。

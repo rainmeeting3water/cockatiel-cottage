@@ -12,6 +12,8 @@
   ]);
   const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const icon = name => root.CottageArt?.icon(name) || '';
+  const tr = value => root.CottageI18n?.t(value) || value;
+  const canvasFont = () => root.CottageI18n?.fontFamily?.() || '"Cottage TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif';
   const uid = () => root.crypto?.randomUUID?.() || 'photo-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2);
   let dbPromise, mounted, generation = 0, rows = [], busy = false, openDraft, lastFocus, previewURL;
 
@@ -157,7 +159,7 @@
   function paint() {
     if(!mounted)return;
     mounted.querySelector('.gallery-count').textContent=`${rows.length} / ${MAX_PHOTOS} 張`;
-    mounted.querySelector('.gallery-grid').innerHTML=rows.length?rows.map(row=>`<article class="gallery-card" data-photo="${esc(row.id)}"><div class="gallery-frame frame-${esc(row.frame)}"><div class="gallery-image-wrap"><img src="${row.dataUrl}" alt="${esc(row.name)}的鳥寶照片" loading="lazy"></div><div class="gallery-photo-label">${esc(row.name)}</div><span class="gallery-frame-decoration" aria-hidden="true"></span></div><div class="gallery-card-actions"><button class="btn secondary" data-gallery-action="edit" data-id="${esc(row.id)}">${icon('settings')}改名字／相框</button><button class="gallery-small-button" data-gallery-action="download" data-id="${esc(row.id)}" aria-label="下載${esc(row.name)}的相框圖">${icon('download')}<span>下載</span></button><button class="gallery-small-button gallery-remove" data-gallery-action="delete" data-id="${esc(row.id)}" aria-label="移除${esc(row.name)}的照片">移除</button></div></article>`).join(''):`<div class="gallery-empty"><div class="gallery-empty-papers" aria-hidden="true"><span>♡</span><span>✦</span><span>☀</span></div><h2>第一張鳥寶照片，等你放上來。</h2><p>打哈欠、歪頭、睡午覺……<br>那些可愛的小時刻，都值得留下來。</p><button class="btn" data-gallery-action="add">${icon('upload')}選一張鳥寶照片</button></div>`;
+    mounted.querySelector('.gallery-grid').innerHTML=rows.length?rows.map(row=>`<article class="gallery-card" data-photo="${esc(row.id)}"><div class="gallery-frame frame-${esc(row.frame)}"><div class="gallery-image-wrap"><img src="${row.dataUrl}" alt="鳥寶照片" aria-describedby="gallery-name-${esc(row.id)}" loading="lazy"></div><div class="gallery-photo-label" id="gallery-name-${esc(row.id)}" data-i18n-ignore>${esc(row.name)}</div><span class="gallery-frame-decoration" aria-hidden="true"></span></div><div class="gallery-card-actions"><button class="btn secondary" data-gallery-action="edit" data-id="${esc(row.id)}">${icon('settings')}改名字／相框</button><button class="gallery-small-button" data-gallery-action="download" data-id="${esc(row.id)}" aria-label="下載這張相框圖" aria-describedby="gallery-name-${esc(row.id)}">${icon('download')}<span>下載</span></button><button class="gallery-small-button gallery-remove" data-gallery-action="delete" data-id="${esc(row.id)}" aria-label="移除這張照片" aria-describedby="gallery-name-${esc(row.id)}">移除</button></div></article>`).join(''):`<div class="gallery-empty"><div class="gallery-empty-papers" aria-hidden="true"><span>♡</span><span>✦</span><span>☀</span></div><h2>第一張鳥寶照片，等你放上來。</h2><p>打哈欠、歪頭、睡午覺……<br>那些可愛的小時刻，都值得留下來。</p><button class="btn" data-gallery-action="add">${icon('upload')}選一張鳥寶照片</button></div>`;
     mounted.querySelector('[data-gallery-action="add"]').disabled=rows.length>=MAX_PHOTOS;
   }
   function releasePreview(){if(previewURL){URL.revokeObjectURL(previewURL);previewURL=null;}}
@@ -174,7 +176,7 @@
   }
   function draftEditor(draft,existing=false) {
     openDraft=draft;
-    dialog(existing?'幫照片換個樣子':'這張照片，叫什麼名字呢？',`<form class="gallery-editor" data-gallery-form><div class="gallery-draft frame-${esc(draft.frame)}"><div class="gallery-image-wrap"><img src="${draft.dataUrl}" alt="準備放入相框的鳥寶照片"></div><div class="gallery-photo-label">${esc(draft.name)}</div><span class="gallery-frame-decoration" aria-hidden="true"></span></div><label class="field">鳥寶暱稱<input name="photoName" value="${esc(draft.name)}" maxlength="20" required autocomplete="off" placeholder="例如：午睡的小米"></label><fieldset class="gallery-frame-options"><legend>挑一個喜歡的相框</legend>${FRAMES.map(f=>`<label class="gallery-frame-choice"><input type="radio" name="photoFrame" value="${f.id}" ${f.id===draft.frame?'checked':''}><span class="gallery-frame-swatch frame-${f.id}" aria-hidden="true">♡</span><span>${f.name}</span></label>`).join('')}</fieldset><p class="gallery-help">照片會縮小後保存在這台裝置，不會上傳。請只放鳥寶，不要放人臉、姓名或地址。</p><button class="btn wide" type="submit">${existing?'保存新樣子':'放進我的相簿'}</button></form>`);
+    dialog(existing?'幫照片換個樣子':'這張照片，叫什麼名字呢？',`<form class="gallery-editor" data-gallery-form><div class="gallery-draft frame-${esc(draft.frame)}"><div class="gallery-image-wrap"><img src="${draft.dataUrl}" alt="準備放入相框的鳥寶照片"></div><div class="gallery-photo-label" data-i18n-ignore>${esc(draft.name)}</div><span class="gallery-frame-decoration" aria-hidden="true"></span></div><label class="field">鳥寶暱稱<input name="photoName" data-i18n-ignore value="${esc(draft.name)}" maxlength="20" required autocomplete="off" placeholder="${esc(tr('例如：午睡的小米'))}"></label><fieldset class="gallery-frame-options"><legend>挑一個喜歡的相框</legend>${FRAMES.map(f=>`<label class="gallery-frame-choice"><input type="radio" name="photoFrame" value="${f.id}" ${f.id===draft.frame?'checked':''}><span class="gallery-frame-swatch frame-${f.id}" aria-hidden="true">♡</span><span>${f.name}</span></label>`).join('')}</fieldset><p class="gallery-help">照片會縮小後保存在這台裝置，不會上傳。請只放鳥寶，不要放人臉、姓名或地址。</p><button class="btn wide" type="submit">${existing?'保存新樣子':'放進我的相簿'}</button></form>`);
     openDraft={...draft,existing};
   }
   function roundRect(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
@@ -187,8 +189,8 @@
     if(row.frame==='polaroid'){c.fillStyle='#efede7';c.fillRect(33,33,1134,1334);c.fillStyle='#fffefa';c.fillRect(48,40,1104,1314);}
     const x=90,y=90,w=1020,h=1020;c.save();roundRect(c,x,y,w,h,row.frame==='polaroid'?4:35);c.clip();c.fillStyle='#fffefa';c.fillRect(x,y,w,h);
     const scale=Math.min(w/img.naturalWidth,h/img.naturalHeight),iw=img.naturalWidth*scale,ih=img.naturalHeight*scale;c.drawImage(img,x+(w-iw)/2,y+(h-ih)/2,iw,ih);c.restore();
-    c.fillStyle=style[1];c.textAlign='center';c.textBaseline='middle';c.font='500 48px "Noto Sans TC", "Microsoft JhengHei", sans-serif';c.fillText(row.name,600,1210,1020);
-    c.globalAlpha=.75;c.font='28px "Noto Sans TC", "Microsoft JhengHei", sans-serif';c.fillText('鳥寶的小日子',600,1280);c.globalAlpha=1;
+    c.fillStyle=style[1];c.textAlign='center';c.textBaseline='middle';c.font='500 48px '+canvasFont();c.fillText(row.name,600,1210,1020);
+    c.globalAlpha=.75;c.font='28px '+canvasFont();c.fillText(tr('鳥寶的小日子'),600,1280);c.globalAlpha=1;
     if(row.frame==='garden'){for(const [px,py] of [[50,95],[1140,1140],[1060,60],[85,1300]]){c.fillStyle='#9aaf78';c.beginPath();c.ellipse(px,py,17,37,-.5,0,Math.PI*2);c.fill();c.fillStyle='#e5b294';for(let a=0;a<5;a++){const theta=a*Math.PI*2/5;c.beginPath();c.arc(px+Math.cos(theta)*18,py-42+Math.sin(theta)*18,13,0,Math.PI*2);c.fill();}c.fillStyle='#f7df8b';c.beginPath();c.arc(px,py-42,10,0,Math.PI*2);c.fill();}}
     if(row.frame==='night'){c.fillStyle='#f5df9f';for(const [px,py,r] of [[45,50,7],[1135,82,10],[70,1160,8],[1120,1300,7],[1010,1335,5]]){c.beginPath();for(let n=0;n<8;n++){const a=n*Math.PI/4,rr=n%2?r*.35:r;c.lineTo(px+Math.cos(a)*rr,py+Math.sin(a)*rr);}c.closePath();c.fill();}}
     return new Promise((resolve,reject)=>canvas.toBlob(blob=>blob?resolve(blob):reject(new Error('相框圖還沒做好，請再試一次。')),'image/png'));
@@ -202,9 +204,9 @@
       if(action==='add'){mounted.querySelector('.gallery-photo-input').value='';mounted.querySelector('.gallery-photo-input').click();}
       else if(action==='close')closeDialog();
       else if(action==='edit'&&row)draftEditor({...row},true);
-      else if(action==='delete'&&row)dialog('要移除這張照片嗎？',`<p>「${esc(row.name)}」會從這台裝置的相簿移除。你原本的照片檔和已下載的相框圖不會被刪掉。</p><p>想保留的話，可以先取消，再備份相簿。</p>`,`<button class="btn secondary" data-gallery-action="close">先留著</button><button class="btn danger" data-gallery-action="confirm-delete" data-id="${esc(row.id)}">確認移除</button>`);
+      else if(action==='delete'&&row)dialog('要移除這張照片嗎？',`<p><span data-i18n-ignore>「${esc(row.name)}」</span> <span>會從這台裝置的相簿移除。你原本的照片檔和已下載的相框圖不會被刪掉。</span></p><p>想保留的話，可以先取消，再備份相簿。</p>`,`<button class="btn secondary" data-gallery-action="close">先留著</button><button class="btn danger" data-gallery-action="confirm-delete" data-id="${esc(row.id)}">確認移除</button>`);
       else if(action==='confirm-delete'&&row){busy=true;await transact('delete',row.id);if(!mounted||token!==generation)return;closeDialog();await refresh(token);status('這張照片已從相簿移除。');}
-      else if(action==='download'&&row){busy=true;status('正在幫照片裝上相框……');const blob=await framedBlob(row);if(!mounted||token!==generation)return;const filename=(row.name.replace(/[<>:"/\\|?*\u0000-\u001f]/g,'').slice(0,30)||'鳥寶')+'-相框.png';fileDownload(blob,filename);const url=URL.createObjectURL(blob);dialog('相框圖做好了！',`<img class="gallery-export-preview" src="${url}" alt="${esc(row.name)}的相框成品"><p>可以下載 PNG 圖片。手機也可以長按圖片，選擇儲存。</p>`,`<a class="btn" href="${url}" download="${esc(filename)}">下載相框圖片</a><button class="btn secondary" data-gallery-action="close">看完了</button>`);previewURL=url;status('相框圖做好了，可以下載或長按儲存。');}
+      else if(action==='download'&&row){busy=true;status('正在幫照片裝上相框……');const blob=await framedBlob(row);if(!mounted||token!==generation)return;const filename=(row.name.replace(/[<>:"/\\|?*\u0000-\u001f]/g,'').slice(0,30)||'鳥寶')+'-相框.png';fileDownload(blob,filename);const url=URL.createObjectURL(blob);dialog('相框圖做好了！',`<img class="gallery-export-preview" src="${url}" alt="鳥寶的相框成品"><p>可以下載 PNG 圖片。手機也可以長按圖片，選擇儲存。</p>`,`<a class="btn" href="${url}" download="${esc(filename)}">下載相框圖片</a><button class="btn secondary" data-gallery-action="close">看完了</button>`);previewURL=url;status('相框圖做好了，可以下載或長按儲存。');}
       else if(action==='export'){busy=true;const album=await exportData();if(!mounted||token!==generation)return;fileDownload(new Blob([JSON.stringify(album)],{type:'application/json'}),'玄鳳小日子-鳥寶相簿.json');status('相簿備份已準備好。這份備份和小屋的遊戲紀錄分開。');}
       else if(action==='import'){mounted.querySelector('.gallery-album-input').value='';mounted.querySelector('.gallery-album-input').click();}
       else if(action==='confirm-import'&&openDraft?.album){busy=true;const album=openDraft.album;await transact('replace',album);if(!mounted||token!==generation)return;closeDialog();await refresh(token);status('相簿已載入，原本的照片檔沒有更動。');}
@@ -218,7 +220,7 @@
       if(event.target.classList.contains('gallery-photo-input')){
         if(rows.length>=MAX_PHOTOS)throw new Error('相簿已經有 12 張照片。先備份，再挑一張移除吧。');
         status('正在整理照片，請等一下……');const dataUrl=await normalizePhoto(file);if(!mounted||token!==generation)return;
-        draftEditor({id:uid(),name:'我的鳥寶',frame:'cream',dataUrl,createdAt:Date.now()});status('挑個相框，再按「放進我的相簿」才會保存。');
+        draftEditor({id:uid(),name:tr('我的鳥寶'),frame:'cream',dataUrl,createdAt:Date.now()});status('挑個相框，再按「放進我的相簿」才會保存。');
       } else if(event.target.classList.contains('gallery-album-input')) {
         if(file.size>MAX_BACKUP)throw new Error('相簿備份請選 20 MB 以內的檔案。');
         status('正在檢查相簿裡的照片……');const album=await parseAlbum(await file.text());if(!mounted||token!==generation)return;
@@ -230,7 +232,7 @@
     if(!openDraft?.dataUrl)return;const editor=event.target.closest('.gallery-editor');if(!editor)return;
     const selected=editor.querySelector('[name="photoFrame"]:checked')?.value||'cream';
     const preview=editor.querySelector('.gallery-draft');preview.className='gallery-draft frame-'+selected;
-    preview.querySelector('.gallery-photo-label').textContent=editor.querySelector('[name="photoName"]').value||'我的鳥寶';
+    preview.querySelector('.gallery-photo-label').textContent=editor.querySelector('[name="photoName"]').value||tr('我的鳥寶');
   }
   async function submit(event){
     if(!event.target.matches('[data-gallery-form]'))return;event.preventDefault();if(busy||!openDraft?.dataUrl)return;busy=true;
@@ -243,7 +245,9 @@
   function render(){
     return `<section class="gallery-page" aria-label="我的鳥寶照片牆"><div class="page-heading"><div><div class="eyebrow">OUR LITTLE BIRD MEMORIES</div><h1>把鳥寶的可愛，框起來。</h1><p>放上照片，挑個相框，留下你喜歡的小時刻。</p></div><span class="gallery-count">0 / ${MAX_PHOTOS} 張</span></div><div class="gallery-privacy">${icon('shield')}<p><strong>這是你自己的照片牆。</strong>照片只留在這台裝置，不會公開，也不會上傳到網路。請選自己拍的鳥寶照片，別放人臉、姓名或地址。</p></div><div class="gallery-toolbar"><button class="btn" data-gallery-action="add">${icon('upload')}放上鳥寶照片</button><div><button class="btn secondary" data-gallery-action="export">${icon('download')}備份照片</button><button class="btn secondary" data-gallery-action="import">${icon('upload')}匯入相簿</button><button class="gallery-small-button" data-gallery-action="reload">重新讀取</button></div></div><p class="gallery-status" role="status" aria-live="polite">正在打開相簿……</p><div class="gallery-grid"></div><div class="gallery-notes"><h2>搬家前，記得幫照片打包。</h2><p>清除瀏覽器資料、換裝置，或關閉無痕視窗，都可能讓照片不見。按「備份照片」存一份，就能之後再匯入。這份相簿備份，和小屋的遊戲紀錄分開。</p><p>每張最多 10 MB，最多 12 張。可選 JPG、PNG 或靜態 WebP；放進相簿時會縮小照片，並移除原檔裡的拍攝資訊。</p></div><input class="gallery-photo-input" type="file" accept="image/jpeg,image/png,image/webp" hidden><input class="gallery-album-input" type="file" accept="application/json,.json" hidden><dialog class="gallery-dialog" aria-labelledby="gallery-dialog-title"></dialog></section>`;
   }
+  function localeChanged(){const input=mounted?.querySelector('[name="photoName"]');if(input)input.placeholder=tr('例如：午睡的小米');}
   function unmount(){
+    root.removeEventListener?.('CottageLanguageChanged',localeChanged);
     releasePreview();
     if(mounted){mounted.removeEventListener('click',click);mounted.removeEventListener('change',fileChange);mounted.removeEventListener('input',draftChange);mounted.removeEventListener('change',draftChange);mounted.removeEventListener('submit',submit);const d=mounted.querySelector('.gallery-dialog');if(d?.open)d.close();}
     generation++;mounted=null;rows=[];openDraft=null;busy=false;
@@ -251,6 +255,7 @@
   async function mount(container){
     unmount();mounted=container?.matches?.('.gallery-page')?container:container?.querySelector?.('.gallery-page');if(!mounted)return;
     const token=generation;
+    root.addEventListener?.('CottageLanguageChanged',localeChanged);
     mounted.addEventListener('click',click);mounted.addEventListener('change',fileChange);mounted.addEventListener('input',draftChange);mounted.addEventListener('change',draftChange);mounted.addEventListener('submit',submit);
     try{await refresh(token);if(mounted&&token===generation)status('照片只保存在這台裝置。想搬到別台裝置，先備份相簿。');}
     catch(error){if(mounted&&token===generation){rows=[];paint();status(messageFor(error),true);}}

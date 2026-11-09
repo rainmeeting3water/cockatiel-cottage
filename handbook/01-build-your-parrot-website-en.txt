@@ -1,0 +1,38 @@
+Please help me plan and build a website about learning about parrots and practising their daily care. Start with a playable first version that I can preview locally. Do not publish it.
+
+My settings:
+- Bird species: [enter the species]
+- Bird’s nickname: [enter the nickname]
+- Colours and appearance: [describe the feathers, crest, cheeks, tail and other features]
+- Preferred look and controls: [enter the style, colours, and phone or computer preferences]
+
+First inspect the working environment and project rules. Briefly explain what you will make and which files you will change, then begin. Build the core experience for one bird first. Do not rewrite the whole project just to add more features. If the species is uncertain, ask me to confirm it. You can work on a general layout while waiting, but do not guess the bird’s diet or care needs.
+
+Use natural Traditional Chinese as the main interface language, with wording that primary and junior high school students can understand. Lead with pictures, short headings and one-sentence cards. Let people open details when needed. Use large buttons and readable text. Support phones, computers, touch and keyboards. Sound like a kind friend: avoid piles of technical terms, formal official language and very long sentences.
+
+For this version, also provide a switch between Traditional Chinese and simple English, with adjustable text size and readable font choices. Choose an appropriate font stack for each language, and keep Traditional Chinese characters readable when they appear in English mode. Use available, properly licensed fonts; ask before downloading or installing anything new. Keep the bird’s nickname exactly as the user entered it in either language. Do not translate or replace it automatically. Check and implement these features in this local version; do not claim they are already deployed or available to every user.
+
+Please include these core parts:
+1. Introduce the species’ usual behaviour, daily needs, common appearances and the long-term responsibility of care. Feather colour variations within one species are not different species and do not determine personality. Photos can guide appearance, but cannot be used to diagnose health or determine sex.
+2. Make a searchable food guide with separate labels for “Suitable in small amounts”, “Avoid” and “Not enough information”. Explain preparation and important conditions. When reliable evidence is missing, label it “Not enough information”. No search result does not mean a food is safe. Do not assign the same number of grams or diet ratio to every bird.
+3. Include changing water, preparing food, cleaning, gentle play, rest and safe time outside the cage. The bird can spend quiet time alone; the player should not need to keep clicking. Invite interaction first. Give the bird space if it does not want to play. Do not forcefully grab it or use hunger to train it.
+4. Before time outside the cage, check doors, windows, ceiling fans, cats, dogs, heat sources and other hazards. Before leaving, confirm that the bird is back in a safe cage. A technical interruption, crash or uncertain departure must not automatically count as neglect. Provide a follow-up confirmation without a penalty. Do not secretly reduce scores while the player is offline or let the bird die without the player knowing.
+5. Clearly label care scores, reminder stories and practice vet costs as game simplifications. They are not real disease probabilities, prices, diagnoses or guarantees of care outcomes. A game can restart; a real life may not get another chance.
+
+For diet, toxins and health information, consult reliable bird vets, veterinary organisations or veterinary manuals. Examples include AAV, VCA and Merck/MSD information that applies to the chosen species. Include source links and the actual dates the sources were checked. If sources differ, keep that difference visible rather than pretending there is one answer. Do not apply cockatiel information directly to another species. Do not provide medicine doses for self-treatment.
+
+If a real bird has trouble breathing, severe weakness, ongoing bleeding or possible poisoning, show a clear message: children should get the adult responsible for the bird, and contact a vet or emergency clinic that treats birds immediately. The game must not delay getting help. Changing water, feeding or earning points cannot replace a veterinary visit.
+
+Use original images and animations, clearly licensed assets, or materials that I have the right to use. Fix one consistent bird design first, then make natural blinking, preening, walking and wing-flapping actions. Do not join pictures of different characters and pretend they are the same bird. Provide mute, stop-sound and reduced-motion controls, and respect the device’s reduced-motion preference. If music is added, use a lawful link or player from the original creator. Do not download and reproduce someone else’s songs, and do not automatically play loud audio.
+
+The first version should need no login or backend. Store game records in the user’s own browser, with export, import and confirmation before reset. Explain that changing device or URL, clearing browser data, or closing a private-browsing window may lose records. Before a version update, test older saves. Do not overwrite an incompatible original save.
+
+If you add a bird photo wall, start with each person’s own private local album, with frame choices, previews and downloads. Do not upload photos to the cloud or GitHub, or make the album a public shared wall. Resize photos and remove camera metadata during processing. Clearly explain whether album backups and game backups are separate. Do not collect children’s birthdays, locations, contact information or faces in photos. Do not add public chat.
+
+If you use an open-source project, keep its licence and required notices. A code licence does not grant permission to reuse someone else’s photos, videos, songs, articles or font files. Do not publish assets when their rights are uncertain.
+
+After completing the core version, check phone layouts, button sizes, keyboard use, main interactions, safety mode, saving and reloading, import and export, follow-up confirmation after an unexpected exit, and sources. Use synthetic test data, not real personal records. Distinguish code tests, simulated phone viewports, real-phone tests and professional review. Do not report an untested part as passed.
+
+Finally, provide the files I can preview, simple operating instructions, what is finished, what is not finished, what was actually checked, and what still needs a bird vet’s review. Before installing or upgrading packages, spending money, using account credentials, logging in, sending photos to an external AI service, requesting new data permissions, uploading code or publishing, explain the purpose and impact, then ask me. This request is not permission to deploy or spend money.
+
+Git staging, committing, pushing and website publication each need separate consent. Explain the exact action and target before asking. Approval for one step is not approval for the others.

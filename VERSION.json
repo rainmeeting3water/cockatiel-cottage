@@ -1,5 +1,5 @@
 {
-  "version": "0.3.1",
+  "version": "0.4.0",
   "saveSchema": 2,
   "decorSchema": 1,
   "albumSchema": 1,
@@ -12,7 +12,7 @@
     },
     {
       "file": "ASSETS.md",
-      "sha256": "0a0dd7e5e8cf6e665764966a06872f5b45136a44ae77a84cd9bca9d166638c5d"
+      "sha256": "286aadd0f8d3c26a55fc71e33f81c4f3891dcbc77234a197a527a49d8380a558"
     },
     {
       "file": "CONTRIBUTING.md",
@@ -28,11 +28,11 @@
     },
     {
       "file": "README.md",
-      "sha256": "733916d8ad966532520c4c9e9aafd9a69c1efc57f8d981a4728591d5aab38319"
+      "sha256": "afdbf731d0667af8a6e92d092d17cde11449a662b48769008d90eebb0b3e1c4b"
     },
     {
       "file": "TESTING.md",
-      "sha256": "4e45bd80c80d0a685cb506d28d5a7993fca47f82da76dcea8a596cca2291a302"
+      "sha256": "d445ab704a35fadb03f80dcf1d948f6de9565ef8590c9c629a79d46df71c5164"
     },
     {
       "file": "THIRD-PARTY-NOTICES.md",
@@ -44,7 +44,7 @@
     },
     {
       "file": "app.js",
-      "sha256": "d71772ee9d20ebbbe600bdf1f7c9183f3f121283f906983d33649f50f551a7ea"
+      "sha256": "1ea0c8819dfc5afb7d9ab60860cf1ad0a0f771d00bd16872c1ca0dbd0d1dd265"
     },
     {
       "file": "art.js",
@@ -83,6 +83,10 @@
       "sha256": "019c2cb6c3fea668e463016a695b3ea7aef38007b2e130f33b5b27552b0853be"
     },
     {
+      "file": "content-en.js",
+      "sha256": "6b11f5096f88d5adba8407fa207e4bfffd1e6ed2f751d84093dcdefd220245ba"
+    },
+    {
       "file": "content.js",
       "sha256": "d26ec0fa163be413e25d5ceb8e065f3bee94a4587521c4dd51f5ded0dc433d5d"
     },
@@ -96,7 +100,7 @@
     },
     {
       "file": "creator.js",
-      "sha256": "233cdde2097b47cc32102c1b9223beb922d7e4cbc1f465c982bd414369e1eb12"
+      "sha256": "27d30f72d694e9410726d94a5d9082f42da9cab70dca743fb27fa942419733c7"
     },
     {
       "file": "decor.css",
@@ -116,7 +120,7 @@
     },
     {
       "file": "gallery.js",
-      "sha256": "f6d01609acd49632261b6def1ed00b4c105544b153388dc642259730f3966312"
+      "sha256": "b2d8871a28ffac75cb95fb7ce5a7a1131f4c82d7ef6df3f2984a428a024692ae"
     },
     {
       "file": "guides.css",
@@ -127,12 +131,20 @@
       "sha256": "bea9431abfd5bf641a31660ccdb2199ae843ce9c2f72e2999e00bfba77872b35"
     },
     {
+      "file": "handbook\\01-build-your-parrot-website-en.txt",
+      "sha256": "82721934c01093f05da627a226699878f8e366c77f0364c26528a204ce735dae"
+    },
+    {
       "file": "handbook\\01-建立專屬鸚鵡網站.txt",
-      "sha256": "f543272c22f40a3c73e6660f504496733a15060d2cdae39f8e53f81e6c0e7961"
+      "sha256": "bac73533418e1cb9dc77145dcf2bb40930bca883ed32dd8eef527fb2a50a38b3"
+    },
+    {
+      "file": "handbook\\02-use-your-own-bird-en.txt",
+      "sha256": "5d74eeb71ba309138bda62fe57481c7693ca66b47871eddd94b36ec6f1dc4de9"
     },
     {
       "file": "handbook\\02-換成自家鳥寶.txt",
-      "sha256": "5a89c90829cf72679501ca19700b24c5882be3e6a9c642ec2a8911e266bffc14"
+      "sha256": "e69cff9ec625f8413e5af767cc9c4131aa36bfd20eeabbe179f4124d56bd93f9"
     },
     {
       "file": "handbook\\CREATOR-PROMPTS.md",
@@ -140,19 +152,31 @@
     },
     {
       "file": "handbook\\PUBLISH-PLAN.md",
-      "sha256": "3efc9e591ec65b6da980764e7e377d765c17391fa8272253d50a8695ddd96b74"
+      "sha256": "e62985e3c9d26e76b02fb041a9dd0b70736c1529a17331e9977cf9d445b0bf99"
     },
     {
       "file": "handbook\\SHARE-PROMPTS.md",
-      "sha256": "b675229b6ebf3a389daa8b5a769c23f7b7a001449bf5323c4502e5298f9b42f0"
+      "sha256": "c4c0ce90fd8eb33da75caf024564e99aa38acd129c962361e9fd0797433f9c65"
     },
     {
       "file": "handbook\\START-HERE.md",
-      "sha256": "53f89ccf34ea47b867ef0d16b04676c283aa0945d9abbafb76da534ba81600ac"
+      "sha256": "33dbfecabe5840414f342c7bc7bd0e8435d5978397d378ff09bdb2a7a8a1b63b"
+    },
+    {
+      "file": "i18n-app-en.js",
+      "sha256": "1350dd38c7d2a82ec879a4339203f6d4896a415ff5f1dab79103d64b0245ab8d"
+    },
+    {
+      "file": "i18n-components-en.js",
+      "sha256": "8b434b2b50740fd5bcb4ddf6f9f0113318044139e5b975446e50349fb119379d"
+    },
+    {
+      "file": "i18n.js",
+      "sha256": "9f97af4986b519b286d1cae299e9172604b7d8e128a7e2e42697bf3b4b58965b"
     },
     {
       "file": "index.html",
-      "sha256": "cb9028d39e7744380bbadc3e4f7a1571738c329214562ad723e09b8cfed0c7b3"
+      "sha256": "e347fe27ce5c550eddec305a0db869aa335d9708cb788f37b56429f068f812bc"
     },
     {
       "file": "motion.css",
@@ -168,11 +192,15 @@
     },
     {
       "file": "preview.cjs",
-      "sha256": "e949663f916901ce8eba762f2417a2b4fd1bf0366b034e142b1807abd1c4c7f7"
+      "sha256": "e6e9f02fde686537b72033542dee637dfff3ba247825671e1920414bf9211a48"
+    },
+    {
+      "file": "readability.css",
+      "sha256": "957669e32c312c2c6e8298f4bc7f1cea16d98327d4ae68fa7cf1323c917a751c"
     },
     {
       "file": "standalone.html",
-      "sha256": "be619b56e3b7156260a6575600f2feda355fe9bb91c028b0e43cd506e0eeaf5f"
+      "sha256": "c25483f891513ce08a1b789c2e19f2f6b9e1d74667bae62eb1a198a2b98feb58"
     },
     {
       "file": "style.css",
@@ -181,6 +209,10 @@
     {
       "file": "tests\\backup.test.cjs",
       "sha256": "31c81b64d40d199f83a7c1192a12b94bcf493adbb17318739170a3d4914cb3a7"
+    },
+    {
+      "file": "tests\\content-en.test.cjs",
+      "sha256": "927e504ae0d290593bb9fd361e357521872691d63d993952a84f46bdabae80cf"
     },
     {
       "file": "tests\\core.test.cjs",
@@ -203,6 +235,14 @@
       "sha256": "58a3f6279cfb0df30018ffa5ae9205368e374175b0234025af43d0c0165b18b6"
     },
     {
+      "file": "tests\\i18n-components.test.cjs",
+      "sha256": "4407326ef8665bb4a03f03ece9447d876e51febabbe5ce41bb46726828cce5b3"
+    },
+    {
+      "file": "tests\\i18n.test.cjs",
+      "sha256": "e7198d16a06a7246a16656ef7857c03086136f453aee8ac2b327db4f729791b5"
+    },
+    {
       "file": "tests\\motion.test.cjs",
       "sha256": "3c37bc25967f668051c8db718c3949309ff7ad1cdb955fe02c07d34a98e4d348"
     },
@@ -211,16 +251,20 @@
       "sha256": "cc7112c6ee5d59f6733b851b6a10a95c428a9872efec0b39e8c4b1dbc3d523cc"
     },
     {
+      "file": "tests\\package.test.cjs",
+      "sha256": "e33f141c089cbf4983edde3854eae4a668a4cfc14ad58b4868226987782cbc19"
+    },
+    {
       "file": "tests\\public.test.cjs",
       "sha256": "e85593b15bdfceb6870b120fad391bb17091c9d9f6bcf1fd5df19dd287dff312"
     },
     {
       "file": "tools\\build-public.cjs",
-      "sha256": "5817bb710f2e690fee261b5c9a3843b968b06f2e203a412e8083b6c2ceaeef72"
+      "sha256": "31ec5a86a73bfa1d3b0d45cc08254662b58e808eb70937e9de41c5d2f87d88f7"
     },
     {
       "file": "tools\\package.cjs",
-      "sha256": "bc57951e7c6092db377ce85ab31fbdbe43aa2f06827018c72930d5bdcbf5eb34"
+      "sha256": "d2615b637a473614249f3ed4624d90cbda8c7d26143b7e65d198cec3c45b063f"
     }
   ]
 }

@@ -41,6 +41,10 @@ SOFTWARE.
   <link rel="stylesheet" href="decor.css">
   <script src="core.js" defer></script>
   <script src="content.js" defer></script>
+  <script src="content-en.js" defer></script>
+  <script src="i18n.js" defer></script>
+  <script src="i18n-app-en.js" defer></script>
+  <script src="i18n-components-en.js" defer></script>
   <script src="art.js" defer></script>
   <script src="motion.js" defer></script>
   <script src="music.js" defer></script>
@@ -51,6 +55,7 @@ SOFTWARE.
   <link rel="stylesheet" href="creator.css">
   <script src="guides.js" defer></script>
   <script src="creator.js" defer></script>
+  <link rel="stylesheet" href="readability.css">
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -61,10 +66,10 @@ SOFTWARE.
     <nav id="nav"></nav>
     <div class="sidebar-note"><span data-icon="feather"></span><p>一起玩，<br>也一起休息。</p><span>慢慢來，我們一起學。</span></div>
     <button class="nav-item settings-trigger" data-action="settings"><span data-icon="settings"></span><span>設定與紀錄備份</span></button>
-    <span class="local-label"><i></i> 體驗版 v0.3.1</span>
+    <span class="local-label"><i></i> 體驗版 v0.4.0</span>
   </aside>
   <div class="app-shell">
-    <header class="topbar"><span id="breadcrumb">我的玄鳳小屋</span><div class="top-tools"><span class="save-status" id="save-status" role="status">紀錄留在這台裝置</span><button class="icon-button" id="sound-toggle" data-action="sound" aria-label="開啟互動音效" aria-pressed="false"></button><button class="icon-button mobile-settings" data-action="settings" aria-label="設定與紀錄備份"><span data-icon="settings"></span></button></div></header>
+    <header class="topbar"><span id="breadcrumb">我的玄鳳小屋</span><div class="top-tools"><div class="language-switch" role="group" aria-label="Language / 語言" data-i18n-ignore><button type="button" data-language="zh-Hant-TW" lang="zh-Hant-TW" aria-pressed="true">繁體中文</button><button type="button" data-language="en" lang="en" aria-pressed="false">English</button></div><span class="save-status" id="save-status" role="status">紀錄留在這台裝置</span><button class="icon-button" id="sound-toggle" data-action="sound" aria-label="開啟互動音效" aria-pressed="false"></button><button class="icon-button mobile-settings" data-action="settings" aria-label="設定與紀錄備份"><span data-icon="settings"></span></button></div></header>
     <main id="main" tabindex="-1"></main>
     <footer class="footer"><span>每天一點點，好好照顧鳥寶。</span><a href="#sources">資料來源與使用說明 <span aria-hidden="true">↗</span></a></footer>
   </div>

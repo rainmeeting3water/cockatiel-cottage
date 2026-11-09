@@ -2,7 +2,7 @@
 // Only copies project-owned static files. No dependencies, credentials, or network.
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..'),target=path.join(root,'docs');
-const files=['index.html','favicon.svg','style.css','motion.css','gallery.css','decor.css','guides.css','creator.css','core.js','content.js','art.js','motion.js','music.js','gallery.js','decor.js','backup.js','guides.js','creator.js','app.js','assets/bird-lutino.webp','assets/bird-gray.webp','assets/bird-pearl.webp','assets/lutino-walk.gif','assets/lutino-flight.gif','assets/lutino-care.gif'];
+const files=['index.html','favicon.svg','style.css','motion.css','gallery.css','decor.css','guides.css','creator.css','core.js','content.js','content-en.js','i18n.js','i18n-app-en.js','i18n-components-en.js','readability.css','art.js','motion.js','music.js','gallery.js','decor.js','backup.js','guides.js','creator.js','app.js','assets/bird-lutino.webp','assets/bird-gray.webp','assets/bird-pearl.webp','assets/lutino-walk.gif','assets/lutino-flight.gif','assets/lutino-care.gif'];
 if(path.resolve(target)!==path.join(root,'docs'))throw Error('Unexpected target');
 if(fs.existsSync(target)&&fs.readdirSync(target).length&&!fs.existsSync(path.join(target,'cottage-generated.json')))throw Error('docs/ contains unowned files. Nothing changed.');
 const permitted=new Set([...files,'.nojekyll','cottage-generated.json']);
@@ -23,6 +23,6 @@ for(const file of files){const src=path.join(root,file),dest=path.join(target,fi
 fs.writeFileSync(path.join(target,'.nojekyll'),'');
 fs.writeFileSync(path.join(target,'cottage-generated.json'),JSON.stringify([...files,'.nojekyll']));
 const generated=fs.readFileSync(path.join(target,'cottage-generated.json'));
-const manifest={version:'0.3.1',publication:'prepared locally; NOT published',publishDirectory:'docs/',files:[...entries,{file:'cottage-generated.json',bytes:generated.length,sha256:crypto.createHash('sha256').update(generated).digest('hex')},{file:'.nojekyll',bytes:0,sha256:crypto.createHash('sha256').update('').digest('hex')}],notPublished:['private user photos','browser saves','handbook','tests','tools','standalone.html']};
+const manifest={version:'0.4.0',publication:'prepared locally; NOT published',publishDirectory:'docs/',files:[...entries,{file:'cottage-generated.json',bytes:generated.length,sha256:crypto.createHash('sha256').update(generated).digest('hex')},{file:'.nojekyll',bytes:0,sha256:crypto.createHash('sha256').update('').digest('hex')}],notPublished:['private user photos','browser saves','handbook','tests','tools','standalone.html']};
 fs.writeFileSync(path.join(root,'PUBLIC-FILES.json'),JSON.stringify(manifest,null,2)+'\n');
 console.log('Prepared '+manifest.files.length+' public static files in docs/. No upload, Git operation, or deployment.');

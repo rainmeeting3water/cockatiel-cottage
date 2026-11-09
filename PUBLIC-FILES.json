@@ -1,12 +1,12 @@
 {
-  "version": "0.3.1",
+  "version": "0.4.0",
   "publication": "prepared locally; NOT published",
   "publishDirectory": "docs/",
   "files": [
     {
       "file": "index.html",
-      "bytes": 4716,
-      "sha256": "949ce24430e9a9f5f167d99fbf8a9d93c7a42aba960e794513ce40a7cb9ec75f"
+      "bytes": 5244,
+      "sha256": "a5038a97e29cbcd765dfb008df5df8d3a92d3a2f3bec53afc4eaa87615c8a046"
     },
     {
       "file": "favicon.svg",
@@ -54,6 +54,31 @@
       "sha256": "d26ec0fa163be413e25d5ceb8e065f3bee94a4587521c4dd51f5ded0dc433d5d"
     },
     {
+      "file": "content-en.js",
+      "bytes": 18617,
+      "sha256": "6b11f5096f88d5adba8407fa207e4bfffd1e6ed2f751d84093dcdefd220245ba"
+    },
+    {
+      "file": "i18n.js",
+      "bytes": 8821,
+      "sha256": "9f97af4986b519b286d1cae299e9172604b7d8e128a7e2e42697bf3b4b58965b"
+    },
+    {
+      "file": "i18n-app-en.js",
+      "bytes": 55468,
+      "sha256": "1350dd38c7d2a82ec879a4339203f6d4896a415ff5f1dab79103d64b0245ab8d"
+    },
+    {
+      "file": "i18n-components-en.js",
+      "bytes": 30387,
+      "sha256": "8b434b2b50740fd5bcb4ddf6f9f0113318044139e5b975446e50349fb119379d"
+    },
+    {
+      "file": "readability.css",
+      "bytes": 12462,
+      "sha256": "957669e32c312c2c6e8298f4bc7f1cea16d98327d4ae68fa7cf1323c917a751c"
+    },
+    {
       "file": "art.js",
       "bytes": 8012,
       "sha256": "ba5ce58f8e19c54e3e5783b4490555e81d2f0cc46ae4507f8e4e79c4a0071362"
@@ -70,8 +95,8 @@
     },
     {
       "file": "gallery.js",
-      "bytes": 26307,
-      "sha256": "f6d01609acd49632261b6def1ed00b4c105544b153388dc642259730f3966312"
+      "bytes": 26950,
+      "sha256": "b2d8871a28ffac75cb95fb7ce5a7a1131f4c82d7ef6df3f2984a428a024692ae"
     },
     {
       "file": "decor.js",
@@ -90,13 +115,13 @@
     },
     {
       "file": "creator.js",
-      "bytes": 28171,
-      "sha256": "233cdde2097b47cc32102c1b9223beb922d7e4cbc1f465c982bd414369e1eb12"
+      "bytes": 30200,
+      "sha256": "27d30f72d694e9410726d94a5d9082f42da9cab70dca743fb27fa942419733c7"
     },
     {
       "file": "app.js",
-      "bytes": 47457,
-      "sha256": "d71772ee9d20ebbbe600bdf1f7c9183f3f121283f906983d33649f50f551a7ea"
+      "bytes": 51264,
+      "sha256": "1ea0c8819dfc5afb7d9ab60860cf1ad0a0f771d00bd16872c1ca0dbd0d1dd265"
     },
     {
       "file": "assets/bird-lutino.webp",
@@ -130,8 +155,8 @@
     },
     {
       "file": "cottage-generated.json",
-      "bytes": 395,
-      "sha256": "7003961c75a26f2657e1aab6159e8846b8083e7610f7859661eb6d77973c9292"
+      "bytes": 480,
+      "sha256": "6336d568007c9aa9f1e85430ca0f09f11baf5253102da13c94a1875d36ae2757"
     },
     {
       "file": ".nojekyll",

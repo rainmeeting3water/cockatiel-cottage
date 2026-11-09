@@ -45,6 +45,10 @@ Use case: identity-preserve. Edit this existing original 4 columns by 4 rows coc
 輸出未完全遵照提示的像素尺寸及眨眼要求，因此使用真實輸出尺寸切格，不宣稱每一格都達到生物動作或閉眼要求。最終檔案及雜湊以 `VERSION.json` 為準。
 
 
+## v0.4 字型
+
+介面字型只使用裝置已有的字型，不下載、安裝或散布字型檔。繁中優先 Noto Sans TC，其次 Microsoft JhengHei；英文優先已安裝的 Inter，其次 Segoe UI、Arial，再以繁中字型補足鳥寶暱稱。此輪 Windows 環境未找到 Inter，實際以現有系統字型呈現。選字前已讀個人字型目錄及使用限制；其他裝置顯示會隨可用字型而異。
+
 ## v0.3 圖解與自己的鳥寶
 
 七張照顧速覽、八種照顧主題圖解及食物圖示為本專案直接繪製的原創 SVG，沒有使用第三方圖片。圖示只幫忙理解，文字條件與原始獸醫來源仍保留；急症方向不折疊。

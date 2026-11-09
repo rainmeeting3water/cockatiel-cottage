@@ -3,7 +3,7 @@ const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
 const types = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.svg':'image/svg+xml','.webp':'image/webp','.gif':'image/gif'};
-const allowed = new Set(['index.html','standalone.html','style.css','motion.css','gallery.css','decor.css','app.js','core.js','content.js','art.js','motion.js','music.js','gallery.js','decor.js','backup.js','favicon.svg','guides.js','guides.css','creator.js','creator.css','assets/bird-lutino.webp','assets/bird-gray.webp','assets/bird-pearl.webp','assets/lutino-walk.gif','assets/lutino-flight.gif','assets/lutino-care.gif']);
+const allowed = new Set(['index.html','standalone.html','style.css','motion.css','gallery.css','decor.css','app.js','core.js','content.js','content-en.js','i18n.js','i18n-app-en.js','i18n-components-en.js','readability.css','art.js','motion.js','music.js','gallery.js','decor.js','backup.js','favicon.svg','guides.js','guides.css','creator.js','creator.css','assets/bird-lutino.webp','assets/bird-gray.webp','assets/bird-pearl.webp','assets/lutino-walk.gif','assets/lutino-flight.gif','assets/lutino-care.gif']);
 const server = http.createServer((req,res)=>{
   let file;
   try { file = decodeURIComponent(new URL(req.url,'http://localhost').pathname).replace(/^\//,'') || 'index.html'; }
